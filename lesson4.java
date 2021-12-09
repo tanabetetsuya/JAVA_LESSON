@@ -5,8 +5,6 @@ public class Lesson4{
     float height = 168;
     String zodiac = "亥";
     System.out.println("私の名前は"+name+"です。年齢は"+age+"です。身長は"+height+"です。干支は"+zodiac+"です。");
-    email("面接日程調整", "test@test.com", "希望日程は12/1です。");
-    email("test@test.com", "承知しました。");
   }
 
   public static void email(String title, String address, String text){
@@ -21,7 +19,19 @@ public class Lesson4{
     System.out.println("本文:"+text);
   }
 
+  public static double calcTriangleArea(double x, double y){
+    double ans = (x*y)/2;
+    return ans;
+  }
+
+  public static double calcCircleArea(double radius){
+    double ans = radius*radius*3.14;
+    return ans;
+  }
+
   public static void main(String[] args){
     introduceOneself();
+    System.out.println(calcTriangleArea(10.0, 5.0));
+    System.out.println(calcCircleArea(5.0));
   }
 }
