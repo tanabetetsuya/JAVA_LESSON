@@ -6,11 +6,18 @@ public class Lesson4{
     String zodiac = "亥";
     System.out.println("私の名前は"+name+"です。年齢は"+age+"です。身長は"+height+"です。干支は"+zodiac+"です。");
     email("面接日程調整", "test@test.com", "希望日程は12/1です。");
+    email("test@test.com", "承知しました。");
   }
 
   public static void email(String title, String address, String text){
     System.out.println(address+"に、以下のメールを送信しました");
     System.out.println("件名:"+title);
+    System.out.println("本文:"+text);
+  }
+  //emailメソッドをオーバーロード
+  public static void email(String address, String text){
+    System.out.println(address+"に、以下のメールを送信しました");
+    System.out.println("無題");
     System.out.println("本文:"+text);
   }
 
