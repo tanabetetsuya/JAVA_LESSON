@@ -11,4 +11,14 @@ public class Hero{
     System.out.println(this.name+"は、"+sec+"秒座った!");
     System.out.println(this.name+"は、"+sec+"HP回復した!");
   }
+  public void slip(){
+    this.hp -= 5;
+    System.out.println(this.name+"は、転んだ!");
+    System.out.println("-5のダメージ");
+  }
+  public void run(){
+    System.out.println(this.name+"は逃げ出した!");
+    System.out.println("gameover");
+    System.out.println("最終HPは"+this.hp+"でした。");
+  }
 }
