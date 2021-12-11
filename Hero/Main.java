@@ -28,5 +28,6 @@ public class Main{
     s.damage = 10;
     h.sword = s; //swordフィールドに生成済みの剣インスタンスを代入
     System.out.println("現在の武器は"+ h.sword.name);
+    h.attack();
   }
 }
