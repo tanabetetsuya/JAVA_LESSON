@@ -8,7 +8,7 @@ public class Main{
 
   public static void main(String[] args){
     int baseHP = 25;
-    Thief t = new Thief("アサカ", 35);
+    Thief t = new Thief("アサカ", baseHP);
     System.out.println(baseHP+ ":" + t.hp);
     heal(baseHP);
     heal(t);
