@@ -42,5 +42,7 @@ public class Main{
     w.heal(h1);
     w.heal(h2);
     w.heal(h2);
+    SuperHero sh = new SuperHero();
+    sh.run();
   }
 }
