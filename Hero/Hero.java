@@ -3,6 +3,11 @@ public class Hero{
   int hp;
   Sword sword; //勇者が装備している剣の情報
 
+  public void attack(){
+    System.out.println(this.name+"は"+this.sword.name+"で攻撃した!");
+    System.out.println("敵に5ダメージを与えた!");
+  }
+
   public void sleep(){
     this.hp = 100; //自分自身のhpフィールド
     System.out.println(this.name+"は、眠って回復した!"); //this.name => 自分自身のnameフィールド
