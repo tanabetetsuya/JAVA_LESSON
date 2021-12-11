@@ -1,6 +1,7 @@
 public class Hero{
   String name;
   int hp;
+  Sword sword; //勇者が装備している剣の情報
 
   public void sleep(){
     this.hp = 100; //自分自身のhpフィールド
