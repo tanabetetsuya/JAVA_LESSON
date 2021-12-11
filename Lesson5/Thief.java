@@ -10,10 +10,10 @@ public class Thief{
   }
 
   public Thief(String name, int hp){
-    this("アサカ", 35, 5);
+    this(name, hp, 5);
   }
 
   public Thief(String name){
-    this("アサカ", 40, 5);
+    this(name, 40, 5);//mpの5は省略できる
   }
 }
