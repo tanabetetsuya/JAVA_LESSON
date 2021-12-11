@@ -1,6 +1,18 @@
 public class PoisonMatango extends Matango{
-  int attack_number = 5;
+  
   public PoisonMatango(char suffix){
-    super();
+      super(suffix);
+  }
+
+  public void attack(Hero h){
+    int attack_number = 5;
+    while(attack_number > 0){
+      super.attack(h);
+      System.out.println("さらに毒の胞子をばらまいた");
+      System.out.println(h.hp/5+"ポイントのダメージ");
+      h.hp -= h.hp/5;
+      System.out.println("勇者は"+h.hp+"HPである");
+      attack_number--;
+    }
   }
 }
