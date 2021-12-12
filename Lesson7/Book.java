@@ -1,7 +1,4 @@
-public class Book{
-  String name;
-  int price;
-  String color;
+public class Book extends TangibleAsset{
   String isbn;
   
   //コンストラクタ
