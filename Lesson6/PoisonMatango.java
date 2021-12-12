@@ -11,7 +11,7 @@ public class PoisonMatango extends Matango{
       System.out.println("さらに毒の胞子をばらまいた");
       System.out.println(h.hp/5+"ポイントのダメージ");
       h.hp -= h.hp/5;
-      System.out.println("勇者は"+h.hp+"HPである");
+      System.out.println(h.name+"は"+h.hp+"HPである");
       attack_number--;
     }
   }
