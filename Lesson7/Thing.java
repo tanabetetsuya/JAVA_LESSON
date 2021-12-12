@@ -1,5 +1,5 @@
 public interface Thing{
 
-  Double getWeight();
-  void setWeight(Double weight);
+  double getWeight();
+  void setWeight(double weight);
 }
