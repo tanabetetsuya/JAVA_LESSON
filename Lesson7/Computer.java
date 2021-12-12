@@ -3,9 +3,7 @@ public class Computer extends TangibleAsset{
   
   //コンストラクタ
   public Computer(String name, int price, String color, String makerName){
-    this.name = name;
-    this.price = price;
-    this.color = color;
+    super(name, price, color);
     this.makerName = makerName;
   }
 
