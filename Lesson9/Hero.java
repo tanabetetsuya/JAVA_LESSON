@@ -1,6 +1,11 @@
 public class Hero{
   private int hp;
-  private int name;
+  private String name;
+
+  public Hero(String name, int hp){
+    this.name = name;
+    this.hp = hp;
+  }
 
   public int getHp(){
     return this.hp;
@@ -8,7 +13,7 @@ public class Hero{
   public void setHp(int hp){
     this.hp = hp;
   }
-  public int getName(){
+  public String getName(){
     return this.name;
   }
 }
