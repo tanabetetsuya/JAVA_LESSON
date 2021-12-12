@@ -1,15 +1,16 @@
 public abstract class Asset{
   String name;
   int price;
-  String color;
-  
-  public Asset(String name, int price, String color){
+
+  public Asset(String name, int price){
     this.name = name;
     this.price = price;
-    this.color = color;
   }
 
-  public abstract String getName();
-  public abstract int getPrice();
-  public abstract String getColor();
+  public String getName(){
+    return this.name;
+  }
+  public int getPrice(){
+    return this.price;
+  }
 }
