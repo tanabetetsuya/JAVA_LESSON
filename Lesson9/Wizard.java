@@ -3,7 +3,6 @@ public class Wizard{
   private int mp;
   private String name;
   private Wand wand;
-  Wand wa = new Wand("魔法の杖", 50);
 
   
   public String getName(){
@@ -46,7 +45,7 @@ public class Wizard{
 
   public void heal(Hero h){
     int basePoint = 10;
-    int recoverPoint = (int)(basePoint*wa.getPower());
+    int recoverPoint = (int)(basePoint*this.getWand().getPower());
     h.setHp(h.getHp() + recoverPoint);
     System.out.println(h.getName() + "のHPを" + recoverPoint + "回復した");
     System.out.println(h.getName()+"のHPは"+h.getHp());
