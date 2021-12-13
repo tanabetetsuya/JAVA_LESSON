@@ -12,15 +12,10 @@ public class BankAccounts{
   }
 
   public boolean equals(String accountNumber){
-    if(this.accountNumber == accountNumber.trim()){
+    if(this.accountNumber == accountNumber){
       return true;
     }else{
       return false;
     }
-  }
-  
-  public static void main(String[] args){
-    BankAccounts a = new BankAccounts("4649", 1592);
-    System.out.println(a.toString());
   }
 }
