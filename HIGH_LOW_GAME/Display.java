@@ -58,7 +58,7 @@ public class Display implements ActionListener{
     mid_panel.add(parent_no_lbl);
 
     //ラベルのフォント設定=>カード情報の表示位置やサイズを決められる
-    setLabelFont(parent_lbl, Color.BLACK, 90, 10, 100, 20, 14, false);
+    setLabelFont(parent_lbl, Color.GREEN, 90, 10, 100, 20, 14, false);
     setLabelFont(parent_suit_lbl, Color.WHITE, 100, 10, 80, 100, 16, false);
     setLabelFont(parent_no_lbl, Color.WHITE, 100, 35, 80, 100, 16, true);
 
