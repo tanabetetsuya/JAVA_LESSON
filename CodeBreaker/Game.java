@@ -9,38 +9,28 @@ public class Game{
                       +"入力した数字の、位置と数字が当たってたらヒット、\n"
                       +"数字だけ当たってたらブローとカウントします。\n"
                       +"3つともヒットしたら終了です。";
-
   private int[] input;
   private int numberOfAnswers = 3;//将来的に拡張することを考慮して作成
-<<<<<<< HEAD
   private int widthOfRandom = 6; 
-
-  private int hit = 0;
-  private int blow = 0;
-=======
-  private int widthOfRandom = 7; //random.nextInt()で乱数を作成している為範囲は0~6
-
   private int hit;
   private int blow;
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
+
   Random random = new Random();
   int a1;
   int a2;
   int a3;
 
   public Game(){
-<<<<<<< HEAD
+
     answer = new int[numberOfAnswers];
     input = new int[numberOfAnswers];
-=======
-    answer = new int(numberOfAnswers);
-    input = new int(numberOfAnswers);
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
+    makeAnswer();
+
   }
 
   public Game(int numberOfAnswers){
     this.numberOfAnswers = numberOfAnswers;
-<<<<<<< HEAD
+
     input = new int[numberOfAnswers];
     answer = new int[numberOfAnswers];
   }
@@ -63,42 +53,28 @@ public class Game{
   }
 
   public void inputAnswer(){
-=======
-    input = new int(numberOfAnswers);
-    answer = new int(numberOfAnswers);
-  }
-
-  public makeAnswer(){
+    input = new int[numberOfAnswers];
     answer = new int[numberOfAnswers];
-    a1 = random.nextInt(widthOfRandom);
-    a2 = random.nextInt(widthOfRandom);
-    a3 = random.nextInt(widthOfRandom);
-    if(a1 != a2 && a1 != a3 && a2 != a3){
-      answer = {a1, a2, a3};
-    }else{
-      return null;
-    }
   }
 
-  public inputAnswer(){
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
-      System.out.println("３桁の数字を半角スペースを入れて入力してください");
-      Scanner scan = new Scanner(System.in);
-      String line = scan.nextLine();
-      String[] values = line.split(" ", 0);//第二引数の0は末尾の空白の削除
-      input = new int[values.length];
-      for(int i=0;i<values.length;i++){
-        input[i] = Integer.parseInt(values[i]);//String型をint型に変更
-      }
+
+  public void inputAnswer(int index, int answer){
+        if(index > -1 && index < numberOfAnswers){
+          if(answer > 0 && answer <= widthOfRandom){
+            input[index] = answer;
+          }
+        }
+  }
+  public void inputAnswer(int index, String string){
+    int answer;
+    answer = Integer.parseInt(string);
+    inputAnswer(index, answer);
   }
 
-<<<<<<< HEAD
+
   public boolean judge(){
      hit = 0;
      blow = 0;
-=======
-  public judge(){
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
      for(int i=0;i<input.length;i++){
         if(input[i] == answer[i]){
           hit++;
@@ -106,18 +82,14 @@ public class Game{
       }
       for(int i=0;i<input.length;i++){
         for(int j=0;j<input.length;j++){
-<<<<<<< HEAD
           if(i != j && input[i] == answer[j]){
-=======
-          if(i != j && numbers[i] == comp_numbers[j]){
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
             blow++;
           }
         }
       }
-<<<<<<< HEAD
       return (hit == numberOfAnswers);
   }
+
   public int getNumberOfAnswer(){
     return numberOfAnswers;
   }
@@ -136,13 +108,17 @@ public class Game{
   public int getBlow(){
     return this.blow;
   }
+  public int[] getInput(){
+    return this.input;
+  }
   public int getInput(int i){
     return this.input[i];
   }
+  public int[] getAnswer(){
+    return this.answer;
+  }
   public int getAnswer(int i){
     return this.answer[i];
-=======
->>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
   }
 
 }
