@@ -12,22 +12,35 @@ public class Game{
 
   private int[] input;
   private int numberOfAnswers = 3;//将来的に拡張することを考慮して作成
+<<<<<<< HEAD
   private int widthOfRandom = 6; 
 
   private int hit = 0;
   private int blow = 0;
+=======
+  private int widthOfRandom = 7; //random.nextInt()で乱数を作成している為範囲は0~6
+
+  private int hit;
+  private int blow;
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
   Random random = new Random();
   int a1;
   int a2;
   int a3;
 
   public Game(){
+<<<<<<< HEAD
     answer = new int[numberOfAnswers];
     input = new int[numberOfAnswers];
+=======
+    answer = new int(numberOfAnswers);
+    input = new int(numberOfAnswers);
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
   }
 
   public Game(int numberOfAnswers){
     this.numberOfAnswers = numberOfAnswers;
+<<<<<<< HEAD
     input = new int[numberOfAnswers];
     answer = new int[numberOfAnswers];
   }
@@ -50,6 +63,25 @@ public class Game{
   }
 
   public void inputAnswer(){
+=======
+    input = new int(numberOfAnswers);
+    answer = new int(numberOfAnswers);
+  }
+
+  public makeAnswer(){
+    answer = new int[numberOfAnswers];
+    a1 = random.nextInt(widthOfRandom);
+    a2 = random.nextInt(widthOfRandom);
+    a3 = random.nextInt(widthOfRandom);
+    if(a1 != a2 && a1 != a3 && a2 != a3){
+      answer = {a1, a2, a3};
+    }else{
+      return null;
+    }
+  }
+
+  public inputAnswer(){
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
       System.out.println("３桁の数字を半角スペースを入れて入力してください");
       Scanner scan = new Scanner(System.in);
       String line = scan.nextLine();
@@ -60,9 +92,13 @@ public class Game{
       }
   }
 
+<<<<<<< HEAD
   public boolean judge(){
      hit = 0;
      blow = 0;
+=======
+  public judge(){
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
      for(int i=0;i<input.length;i++){
         if(input[i] == answer[i]){
           hit++;
@@ -70,11 +106,16 @@ public class Game{
       }
       for(int i=0;i<input.length;i++){
         for(int j=0;j<input.length;j++){
+<<<<<<< HEAD
           if(i != j && input[i] == answer[j]){
+=======
+          if(i != j && numbers[i] == comp_numbers[j]){
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
             blow++;
           }
         }
       }
+<<<<<<< HEAD
       return (hit == numberOfAnswers);
   }
   public int getNumberOfAnswer(){
@@ -100,6 +141,8 @@ public class Game{
   }
   public int getAnswer(int i){
     return this.answer[i];
+=======
+>>>>>>> 8f3cd7538037ac2595430e079fc545146902e20c
   }
 
 }
