@@ -23,14 +23,20 @@ public class Main{
        int i = primeMinister.get(s);
        System.out.println("総理大臣"+s+"の任期は"+i+"です");
     }
-  }
-}
-public class Hero{
-  private String name;
-  public Hero(String name){
-    this.name = name;
-  }
-  public String getName(){
-    return this.name;
+    Hero h1 = new Hero("齋藤");
+    Hero h2 = new Hero("鈴木");
+    List<Hero> list = new ArrayList<Hero>();
+    list.add(h1);
+    list.add(h2);
+    for(Hero h: list){
+      System.out.println(h.getName());
+    }
+    Map<Hero, Integer> knockDown = new HashMap<Hero, Integer>();
+    knockDown.put(h1, 3);
+    knockDown.put(h2, 7);
+    for(Hero h: knockDown.keySet()){
+      int i = knockDown.get(h);
+      System.out.println(h.getName()+"の倒した数"+"="+i);
+    }
   }
 }
